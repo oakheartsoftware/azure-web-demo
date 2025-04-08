@@ -15,6 +15,8 @@ export class AzuredataComponent {
   azureService: AzureService = inject(AzureService);
 
   constructor() {
-    this.dataSource = this.azureService.getAllAzurenum();
+    this.azureService.getAllAzurenum().then((azureData) => {
+      this.dataSource = azureData;
+    });
   }
 }

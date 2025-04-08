@@ -12,7 +12,7 @@ export class NuminputComponent {
   azureService = inject(AzureService);
 
   applyForm = new FormGroup({
-    num: new FormControl('num', Validators.pattern('[0-9]+'))
+    num: new FormControl('', Validators.pattern('[0-9]+'))
   });
 
   submitApplication() {
